@@ -1,0 +1,36 @@
+demo: https://sg.goflys.cn/webbusiness/#/home
+project_url: https://github.com/ssbandjl/GoFlyAdmin
+作者: https://github.com/huanglishi?tab=repositories
+Golang+Vue快速构建Web应用（字节跳动ArcoDesign）:https://cloud.tencent.com/developer/article/2328040
+doc: https://goflys.cn/prdetail?id=6
+
+
+
+go install github.com/pilu/fresh@latest
+go mod tidy
+go build main.go
+
+mysql:
+vim /etc/mysql/mysql.conf.d/mysqld.cnf
+
+# Set the GOPROXY environment variable
+export GOPROXY=https://goproxy.io,direct
+# Set environment variable allow bypassing the proxy for specified repos (optional)
+export GOPRIVATE=git.mycompany.com,github.com/my/private
+
+http://47.92.214.21:8105/common/install/index
+
+
+CREATE USER 'xb'@'%' IDENTIFIED BY 'songxiaobing1990';
+GRANT ALL PRIVILEGES ON *.* TO 'xb'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
+vue:
+npm install vite
+
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+
+nvm current

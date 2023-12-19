@@ -41,6 +41,7 @@ func CreateDataBase(Username, Password, Hostname, Hostport, Database interface{}
 	engin, err = gorose.Open(&gorose.Config{Driver: global.App.Config.DBconf.Driver, Dsn: dsbSource})
 	if err != nil {
 		global.App.Log.Info(fmt.Sprintf("创建时，数据库连接实例错误: %v", err))
+		global.App.Log.Error(err.Error())
 	} else {
 		engin.GetQueryDB().Exec(fmt.Sprintf("CREATE DATABASE IF NOT EXISTS %v DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_general_ci", Database))
 	}
